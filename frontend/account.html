@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account details — KisanSetu</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="account.css" />
+  </head>
+  <body class="dashboard-shell">
+    <header class="dashboard-topbar">
+      <a class="brand" href="index.html"><span class="brand-mark">↗</span><span>Kisan<span>Setu</span></span></a>
+      <a class="outline-button" id="account-back" href="index.html">Back</a>
+    </header>
+    <main class="account-page">
+      <section class="account-card">
+        <div class="account-avatar" id="account-avatar">U</div>
+        <p class="kpi-label">ACCOUNT DETAILS</p>
+        <h1 id="account-name">Account</h1>
+        <div class="account-details">
+          <div><span>Role</span><strong id="account-role">-</strong></div>
+          <div><span>Email</span><strong id="account-email">-</strong></div>
+          <div><span>Phone</span><strong id="account-mobile">-</strong></div>
+        </div>
+        <button class="outline-button" id="account-logout" type="button">Log out</button>
+      </section>
+    </main>
+    <script src="i18n.js"></script>
+    <script src="account.js"></script>
+    <script src="voice-assistant.js"></script>
+  </body>
+</html>

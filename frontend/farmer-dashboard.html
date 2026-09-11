@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farmer dashboard — KisanSetu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body class="dashboard-shell">
+    <header class="dashboard-topbar">
+      <a class="brand" href="index.html"><span class="brand-mark">↗</span><span>Kisan<span>Setu</span></span></a>
+      <nav class="topbar-links">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="farmer-dashboard.html" data-i18n="nav.dashboard">Dashboard</a>
+        <a href="buyer-dashboard.html" data-i18n="nav.buyerView">Buyer view</a>
+      </nav>
+      <div class="topbar-actions">
+        <select class="language-switch" aria-label="Select language" data-i18n-aria-label="common.selectLanguage">
+          <option value="en">EN</option>
+          <option value="hi">हिं</option>
+          <option value="mr">मर</option>
+        </select>
+        <span id="user-pill" class="user-pill" data-i18n="dashboard.farmerLabel">Farmer</span>
+        <button class="outline-button" id="logout-btn" type="button" data-i18n="common.logout">Log out</button>
+      </div>
+    </header>
+
+    <main class="dashboard-content">
+      <div class="dashboard-welcome"><div><p class="kpi-label" data-i18n="dashboard.welcomeBack">Welcome back</p><h1 data-i18n="dashboard.farmerSellCenter">Your sell center</h1></div><p class="muted" data-i18n="dashboard.sellCenterText">Value your crop, compare verified buyers and choose your best offer.</p></div>
+      <div class="dashboard-actions">
+        <button class="feature-launcher add-item-launcher" type="button" data-open-item-form>
+          <span class="feature-launcher-icon">＋</span>
+          <span><strong data-i18n="dashboard.addItem">Add item</strong><small data-i18n="dashboard.addItemShort">List a new crop lot</small></span>
+        </button>
+        <button class="feature-launcher chat-launcher" type="button" data-open-chat>
+          <span class="feature-launcher-icon">◌</span>
+          <span><strong data-i18n="dashboard.openChat">Open chat</strong><small data-i18n="dashboard.chatWithBuyer">Discuss countered prices</small></span>
+        </button>
+        <button class="feature-launcher orders-launcher" type="button" data-open-orders>
+          <span class="feature-launcher-icon">▣</span>
+          <span><strong data-i18n="dashboard.orders">Orders</strong><small data-i18n="dashboard.ordersShort">Delivered, in transit and pending</small></span>
+        </button>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi-card"><div class="kpi-label" data-i18n="dashboard.activeLots">Active lots</div><div class="kpi-value" data-localize-number="24" data-maximum-fraction-digits="0">24</div><div class="kpi-change">+3 <span data-i18n="dashboard.thisWeek">this week</span></div></div>
+        <div class="kpi-card"><div class="kpi-label" data-i18n="dashboard.pendingOffers">Pending offers</div><div class="kpi-value" data-localize-number="8" data-maximum-fraction-digits="0">08</div><div class="kpi-change"><span data-localize-number="4" data-maximum-fraction-digits="0">4</span> <span data-i18n="dashboard.urgent">urgent</span></div></div>
+        <div class="kpi-card"><div class="kpi-label" data-i18n="dashboard.avgPrice">Avg. realized price</div><div class="kpi-value">₹<span data-localize-number="2980" data-maximum-fraction-digits="0">2,980</span></div><div class="kpi-change">+<span data-localize-number="8.4" data-maximum-fraction-digits="1">8.4</span>% <span data-i18n="dashboard.vsLastWeek">vs last week</span></div></div>
+        <div class="kpi-card"><div class="kpi-label" data-i18n="dashboard.verifiedLots">Verified lots</div><div class="kpi-value" data-localize-number="17" data-maximum-fraction-digits="0">17</div><div class="kpi-change"><span data-localize-number="87" data-maximum-fraction-digits="0">87</span>% <span data-i18n="dashboard.qualityBadge">quality badge</span></div></div>
+      </div>
+      <section class="farmer-intelligence-grid">
+        <div class="advisor-card">
+          <div class="kpi-label" style="color:#b77f1f;" data-i18n="dashboard.aiAdvisor">AI sale-window advisor</div>
+          <h2 data-i18n="dashboard.sellRecommendation">This is a good week to sell</h2>
+          <p class="muted"><span data-i18n="dashboard.marketSignal">Onion demand is rising in Pune and Mumbai.</span> <span data-i18n="dashboard.prediction">Prices may peak in 7 days.</span></p>
+          <div class="advisor-detail-row"><span data-i18n="dashboard.currentPrice">Current price</span><strong>₹3,020 / <span data-i18n="dashboard.quintal">quintal</span></strong></div>
+          <div class="advisor-detail-row"><span data-i18n="dashboard.predicted7">Predicted 7-day price</span><strong>₹3,180 / <span data-i18n="dashboard.quintal">quintal</span></strong></div>
+      </section>
+      <section class="panel feature-panel">
+        <div class="panel-header"><h2 data-i18n="dashboard.orderSummary">Order summary</h2></div>
+        <div class="kpi-grid order-summary-grid">
+          <div class="kpi-card"><div class="kpi-label" data-i18n="dashboard.completedOrders">Completed</div><div class="kpi-value" data-localize-number="12" data-maximum-fraction-digits="0">12</div></div>
+          <div class="kpi-card"><div class="kpi-label" data-i18n="dashboard.inTransitOrders">In transit</div><div class="kpi-value" data-localize-number="3" data-maximum-fraction-digits="0">3</div></div>
+          <div class="kpi-card"><div class="kpi-label" data-i18n="dashboard.pendingOrders">Pending</div><div class="kpi-value" data-localize-number="5" data-maximum-fraction-digits="0">5</div></div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2 data-i18n="dashboard.incomingOffers">Incoming buyer offers</h2>
+          <div class="filter-row"><select id="offer-crop-filter" aria-label="Filter by crop"><option value="ALL">All crops</option><option value="Onion">Onion</option><option value="Tomato">Tomato</option><option value="Wheat">Wheat</option></select><input id="offer-region-filter" placeholder="Filter location" aria-label="Filter by location" /><button class="small-button secondary" type="button" data-i18n="common.exportReport">Export report</button></div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n="dashboard.buyer">Buyer</th>
+                <th data-i18n="dashboard.price">Price</th>
+                <th data-i18n="dashboard.quantity">Quantity</th>
+                <th data-i18n="dashboard.region">Region</th>
+                <th data-i18n="dashboard.status">Status</th>
+                <th data-i18n="dashboard.action">Action</th>
+              </tr>
+            </thead>
+            <tbody id="offers-body"></tbody>
+          </table>
+        </div>
+      </section>
+      <section class="panel feature-panel support-grid">
+        <div><h2 data-i18n="dashboard.paymentSupport">Payment and dispute support</h2><p class="muted" data-i18n="dashboard.paymentSupportText">Track settlement status and raise a structured dispute securely.</p><div class="support-status"><span data-i18n="dashboard.paymentStatus">Payment status</span><strong id="payment-status" data-i18n="dashboard.escrowPending">Escrow pending</strong></div><div class="support-status"><span data-i18n="dashboard.paymentAmount">Amount</span><strong id="payment-amount">₹3,020</strong></div></div>
+        <form id="dispute-form" class="dispute-form"><select id="dispute-reason" aria-label="Dispute reason"><option value="PAYMENT_DELAY">Payment delayed</option><option value="QUANTITY_MISMATCH">Quantity mismatch</option><option value="QUALITY_ISSUE">Quality issue</option></select><input id="dispute-description" required placeholder="Describe the issue" aria-label="Dispute description" /><button class="small-button secondary" type="submit" data-i18n="dashboard.raiseDispute">Raise dispute</button></form>
+      </section>
+
+      <section class="panel feature-panel counter-offers-panel">
+        <div class="panel-header">
+          <div>
+            <h2 data-i18n="dashboard.counterOffers">Countered prices</h2>
+            <p class="muted" data-i18n="dashboard.counterOffersText">See each buyer's counter price before you decide.</p>
+          </div>
+        </div>
+        <div id="counter-offers-list" class="counter-offers-list"></div>
+        <form id="counter-offer-form" class="counter-offer-form">
+          <label><span data-i18n="dashboard.yourCounterPrice">Your counter price (₹/quintal)</span><input id="counter-price" type="number" min="1" step="1" required placeholder="Enter price" /></label>
+          <button class="small-button primary" type="submit" data-i18n="dashboard.sendCounter">Send counter</button>
+        </form>
+      </section>
+
+      <section class="panel feature-panel item-form-panel" id="item-form-panel">
+        <div class="panel-header">
+          <div>
+            <h2 data-i18n="dashboard.addItemTitle">Add produce item</h2>
+            <p class="muted" data-i18n="dashboard.addItemText">Create a lot with its crop name, quantity and picture.</p>
+          </div>
+        </div>
+        <form id="item-form" class="item-form">
+          <label><span data-i18n="dashboard.itemName">Item name</span>
+            <select id="item-name" required>
+              <option value="Onion" data-i18n="dashboard.onion">Onion</option>
+              <option value="Tomato" data-i18n="dashboard.tomato">Tomato</option>
+              <option value="Potato" data-i18n="dashboard.potato">Potato</option>
+              <option value="Wheat" data-i18n="dashboard.wheat">Wheat</option>
+            </select>
+          </label>
+          <label><span data-i18n="dashboard.quantityLabel">Quantity</span><input id="item-quantity" type="number" min="1" value="500" required /></label>
+          <label><span data-i18n="dashboard.itemRegion">Location</span><input id="item-region" value="Nashik" required /></label>
+          <label><span data-i18n="dashboard.picture">Picture</span><input id="item-picture" type="file" accept="image/*" /></label>
+          <button class="small-button primary" type="submit" data-i18n="dashboard.addItem">Add item</button>
+        </form>
+      </section>
+      <section class="panel feature-panel">
+        <div class="panel-header">
+          <div>
+            <h2 data-i18n="dashboard.myItems">My listed items</h2>
+            <p class="muted" data-i18n="dashboard.myItemsText">Items you have added for buyers to see.</p>
+          </div>
+        </div>
+        <div id="item-grid" class="item-grid"></div>
+      </section>
+
+      <section class="panel feature-panel chat-panel" id="chat-panel">
+        <div class="panel-header">
+          <div>
+            <h2 data-i18n="dashboard.priceChat">Price discussion</h2>
+            <p class="muted" data-i18n="dashboard.priceChatText">Discuss countered prices directly with buyers.</p>
+          </div>
+        </div>
+        <div id="chat-thread" class="chat-thread"></div>
+        <form id="chat-form" class="chat-form">
+          <input id="chat-message" required data-i18n-placeholder="dashboard.chatPlaceholder" placeholder="Write a message about the counter price..." />
+          <button class="small-button primary" type="submit" data-i18n="dashboard.send">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="i18n.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="voice-assistant.js"></script>
+  </body>
+</html>
