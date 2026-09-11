@@ -1,0 +1,8 @@
+node_modules/
+.env
+__pycache__/
+*.pyc
+.venv/
+frontend/dist/
+backend/.pytest_cache/
+ai-service/.pytest_cache/
