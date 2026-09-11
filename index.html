@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="KisanSetu connects farmers with better markets, verified buyers and intelligent price recommendations." />
+    <title>KisanSetu — Sell smarter, grow stronger</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="KisanSetu home">
+        <span class="brand-mark">↗</span>
+        <span>Kisan<span>Setu</span></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a class="active" href="#top" data-i18n="nav.home">Home</a>
+        <a href="#intelligence" data-i18n="nav.intelligence">Market intelligence</a>
+        <a href="#how-it-works" data-i18n="nav.how">How it works</a>
+        <a href="#impact" data-i18n="nav.impact">Our impact</a>
+      </nav>
+      <div class="header-actions">
+        <select class="language-switch" aria-label="Select language" data-i18n-aria-label="common.selectLanguage">
+          <option value="en">English</option>
+          <option value="hi">हिंदी</option>
+          <option value="mr">मराठी</option>
+        </select>
+        <a class="outline-button" href="login.html" data-i18n="common.login">Log in</a>
+      </div>
+      <button class="menu-button" type="button" aria-label="Open navigation">☰</button>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="pulse"></span> <span data-i18n="hero.eyebrow">Market intelligence for Bharat</span></div>
+          <h1 data-i18n-html="hero.title">Sell smarter.<br /><em>Grow stronger.</em></h1>
+          <p class="hero-text" data-i18n="hero.text">The right market, the right buyer, and the right time to sell — all in one trusted platform built for farmers and FPOs.</p>
+          <div class="hero-actions">
+            <button class="primary-button" type="button" data-scroll="#dashboard"><span data-i18n="common.startSelling">Start selling</span> <span>↗</span></button>
+            <button class="text-button" type="button" data-scroll="#how-it-works"><span data-i18n="common.seeHow">See how it works</span> <span>→</span></button>
+          </div>
+          <div class="trust-row">
+            <div class="avatar-stack" aria-hidden="true"><span>RK</span><span>AS</span><span>MP</span><span>+</span></div>
+            <div><strong data-i18n="hero.trust">12,400+ farmers</strong><small data-i18n="hero.trustSub">already selling better</small></div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="sun-glow"></div>
+          <div class="field-lines"></div>
+          <div class="hero-card price-card">
+            <div class="card-label"><span class="live-dot"></span> <span data-i18n="hero.livePrice">LIVE MARKET PRICE</span> <span class="trend-up">+<span data-localize-number="8.4" data-maximum-fraction-digits="1">8.4</span>%</span></div>
+            <div class="price-title"><strong data-localize-group="crops" data-localize-key="Onion">Onion</strong><span data-i18n="section.nashikApmc">Nashik APMC</span></div>
+            <div class="price-value">₹ <span data-localize-number="2840" data-maximum-fraction-digits="0">2,840</span> <small>/ <span data-localize-group="units" data-localize-key="quintal">quintal</span></small></div>
+            <div class="mini-chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="chart-axis"><span data-i18n="section.sixAm">6 AM</span><span data-i18n="section.now">Now</span></div>
+          </div>
+          <div class="hero-card recommendation-card">
+            <div class="recommendation-icon">✦</div>
+            <div><small data-i18n="hero.rec">AI RECOMMENDS</small><strong data-i18n="hero.wait3">Sell in 3–5 days</strong><span data-i18n="hero.expected">Expected price ₹3,120</span></div>
+            <span class="card-arrow">→</span>
+          </div>
+          <div class="crop-illustration" aria-hidden="true">🌾</div>
+          <span class="floating-tag tag-one">● <span data-localize-number="1200" data-maximum-fraction-digits="0">1,200</span> <span data-i18n="section.buyersOnline">buyers online</span></span>
+          <span class="floating-tag tag-two">✓ <span data-i18n="section.verifiedNetwork">Verified network</span></span>
+        </div>
+      </section>
+
+      <section class="journey section-shell" id="how-it-works">
+        <div class="section-intro">
+          <div><div class="eyebrow" data-i18n="section.journeyEyebrow">One simple journey</div><h2 data-i18n-html="section.journeyTitle">From harvest to <em>higher returns.</em></h2></div>
+          <p data-i18n="section.journeyIntro">Everything you need to make confident selling decisions — without the guesswork.</p>
+        </div>
+        <div class="journey-grid">
+          <article class="journey-card discover"><div class="number">01</div><div class="journey-icon">⌁</div><h3 data-i18n="section.discoverTitle">Discover</h3><p data-i18n="section.discoverText">See live prices, demand and forecasts across nearby markets.</p><a href="#intelligence"><span data-i18n="common.exploreMarkets">Explore markets</span> <span>↗</span></a></article>
+          <div class="journey-connector">→</div>
+          <article class="journey-card match"><div class="number">02</div><div class="journey-icon">✦</div><h3 data-i18n="section.matchTitle">Match</h3><p data-i18n="section.matchText">Get matched with verified buyers who are looking for your crop.</p><a href="#dashboard"><span data-i18n="common.findBuyer">Find a buyer</span> <span>↗</span></a></article>
+          <div class="journey-connector">→</div>
+          <article class="journey-card sell"><div class="number">03</div><div class="journey-icon">◒</div><h3 data-i18n="section.sellTitle">Sell</h3><p data-i18n="section.sellText">Negotiate, coordinate logistics and track your payment in one place.</p><a href="#dashboard"><span data-i18n="common.startSelling2">Start selling</span> <span>↗</span></a></article>
+        </div>
+      </section>
+
+      <section class="intelligence section-shell" id="intelligence">
+        <div class="section-intro">
+          <div><div class="eyebrow" data-i18n="section.intelligenceEyebrow">Data that works for you</div><h2 data-i18n-html="section.intelligenceTitle">Know the market.<br /><em>Know your worth.</em></h2></div>
+          <p data-i18n="section.intelligenceText">Turn complex market signals into a clear, simple next step for your crop.</p>
+        </div>
+        <div class="dashboard" id="dashboard">
+          <div class="dashboard-top">
+            <div><span class="dashboard-kicker" data-i18n="section.goodMorning">GOOD MORNING, RAMESH <span>✦</span></span><h3 data-i18n="section.marketSnapshot">Your market snapshot</h3></div>
+            <div class="dashboard-tools"><button class="filter-button" type="button">⌖ <span data-i18n="section.mharashtra">Maharashtra</span> <span>⌄</span></button><button class="icon-button" type="button" aria-label="Notifications">♧<b></b></button></div>
+          </div>
+          <div class="metric-grid">
+            <article class="metric-card accent"><span data-i18n="section.currentPrice">Current market price</span><strong id="current-price">₹ <span data-localize-number="2840" data-maximum-fraction-digits="0">2,840</span></strong><small><b>↑ <span data-localize-number="8.4" data-maximum-fraction-digits="1">8.4</span>%</b> <span data-i18n="section.vsLastWeek">vs last week</span></small><div class="sparkline green"></div></article>
+            <article class="metric-card"><span data-i18n="section.predicted">Predicted in 7 days</span><strong>₹ <span data-localize-number="3120" data-maximum-fraction-digits="0">3,120</span></strong><small><b class="violet-text" data-i18n="section.highConfidence">High confidence</b> · <span data-localize-number="87" data-maximum-fraction-digits="0">87</span>%</small><div class="sparkline violet"></div></article>
+            <article class="metric-card"><span data-i18n="section.bestTime">Best time to sell</span><strong>3–5 days</strong><small><b class="orange-text" data-i18n="section.basedOnDemand">Based on demand</b></small><div class="calendar-mark">◷</div></article>
+            <article class="metric-card"><span data-i18n="section.activeBuyers">Active buyers</span><strong data-localize-number="1284" data-maximum-fraction-digits="0">1,284</strong><small><b>↑ <span data-localize-number="12" data-maximum-fraction-digits="0">12</span>%</b> <span data-i18n="section.lookingForOnions">looking for onions</span></small><div class="buyer-dots">● ● ● ● ●</div></article>
+          </div>
+          <div class="dashboard-bottom">
+            <div class="price-chart panel">
+              <div class="panel-heading"><div><span data-i18n="section.priceTrend">PRICE TREND</span><h4><span data-localize-group="crops" data-localize-key="Onion">Onion</span> · <span data-i18n="section.nashikApmc">Nashik APMC</span></h4></div><div class="chart-tabs"><button class="active" type="button" data-i18n="section.sevenDays">7D</button><button type="button" data-i18n="section.thirtyDays">30D</button><button type="button" data-i18n="section.threeMonths">3M</button></div></div>
+              <div class="line-chart"><div class="y-labels"><span>₹<span data-localize-number="3200" data-maximum-fraction-digits="0">3,200</span></span><span>₹<span data-localize-number="3000" data-maximum-fraction-digits="0">3,000</span></span><span>₹<span data-localize-number="2800" data-maximum-fraction-digits="0">2,800</span></span><span>₹<span data-localize-number="2600" data-maximum-fraction-digits="0">2,600</span></span></div><svg viewBox="0 0 620 190" preserveAspectRatio="none" role="img" aria-label="Onion price trend rising over seven days"><defs><linearGradient id="area" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#87b66a" stop-opacity=".3"/><stop offset="100%" stop-color="#87b66a" stop-opacity="0"/></linearGradient></defs><path class="area" d="M0 147 C38 143 44 121 80 126 S130 154 160 132 S205 100 240 108 S280 118 310 96 S355 113 385 82 S425 65 455 78 S495 35 528 52 S570 42 620 12 V190 H0Z"/><path class="line" d="M0 147 C38 143 44 121 80 126 S130 154 160 132 S205 100 240 108 S280 118 310 96 S355 113 385 82 S425 65 455 78 S495 35 528 52 S570 42 620 12"/></svg><div class="x-labels"><span data-localize-group="misc" data-localize-key="Jun 12">Jun 12</span><span data-localize-group="misc" data-localize-key="Jun 14">Jun 14</span><span data-localize-group="misc" data-localize-key="Jun 16">Jun 16</span><span data-localize-group="misc" data-localize-key="Jun 18">Jun 18</span><span data-localize-group="misc" data-localize-key="today">Today</span></div></div>
+            </div>
+            <div class="advisor panel"><div class="advisor-spark">✦</div><span class="dashboard-kicker" data-i18n="section.saleWindowAdvisor">SALE-WINDOW ADVISOR</span><h4 data-i18n-html="section.goodWeek">This is a good<br /><em>week to sell.</em></h4><p data-i18n="section.saleWindowText">Demand is rising in Pune and Mumbai. Prices are expected to peak by June 21.</p><button class="dark-button" type="button" data-toast-i18n="common.sellingWindowSaved" data-i18n="common.viewRecommendation">View recommendation <span>→</span></button></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="impact section-shell" id="impact">
+        <div class="impact-copy"><div class="eyebrow" data-i18n="section.impactEyebrow">Built for real impact</div><h2 data-i18n-html="section.impactTitle">Better markets.<br /><em>Stronger communities.</em></h2><p data-i18n="section.impactText">When farmers get better information, they get better choices. And when they get better choices, the whole community moves forward.</p><button class="text-button" type="button" data-toast-i18n="common.impactComingSoon" data-i18n="section.impactButton">Read our impact story <span>↗</span></button></div>
+        <div class="impact-stats"><div><strong>18%</strong><span data-i18n="section.statPrice">average increase<br />in price realization</span></div><div><strong>42k</strong><span data-i18n="section.statTrade">tonnes traded<br />through KisanSetu</span></div><div><strong>96%</strong><span data-i18n="section.statPayment">of payments<br />on time</span></div></div>
+      </section>
+    </main>
+    <footer class="site-footer section-shell"><a class="brand" href="#top"><span class="brand-mark">↗</span><span>Kisan<span>Setu</span></span></a><p data-i18n="section.footerTag">Technology that puts farmers first.</p><div><a href="#intelligence" data-i18n="nav.intelligence">Market intelligence</a><a href="#how-it-works" data-i18n="nav.how">How it works</a><a href="#impact" data-i18n="section.impactFooter">Impact</a><button type="button" data-toast-i18n="common.contactComingSoon" data-i18n="section.contactUs">Contact us</button></div><small data-i18n="section.copyright">© 2025 KisanSetu · Made for Bharat</small></footer>
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+    <script src="i18n.js"></script>
+    <script src="voice-assistant.js"></script>
+  </body>
+</html>

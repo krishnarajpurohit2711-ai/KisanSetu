@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-maps-api-key" content="" />
+    <title>Live order tracking — KisanSetu</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="tracking.css" />
+  </head>
+  <body class="dashboard-shell">
+    <header class="dashboard-topbar">
+      <a class="brand" href="index.html"><span class="brand-mark">↗</span><span>Kisan<span>Setu</span></span></a>
+      <div class="topbar-actions">
+        <select class="language-switch" aria-label="Select language" data-i18n-aria-label="common.selectLanguage">
+          <option value="en">EN</option><option value="hi">हिं</option><option value="mr">मर</option>
+        </select>
+        <a class="outline-button tracking-back" href="buyer-dashboard.html" data-i18n="dashboard.backToOrders">Back to orders</a>
+      </div>
+    </header>
+    <main class="tracking-page">
+      <section class="tracking-heading">
+        <div>
+          <p class="kpi-label" data-i18n="dashboard.liveTracking">LIVE ORDER TRACKING</p>
+          <h1><span data-i18n="dashboard.order">Order</span> <span id="tracking-order-id">KS-1043</span></h1>
+          <p class="muted" data-i18n="dashboard.liveTrackingText">Follow the shipment on a live Google map.</p>
+        </div>
+        <span class="status-badge status-countered" id="tracking-live-status" data-i18n="common.inTransit">In transit</span>
+      </section>
+      <section class="tracking-page-grid">
+        <div class="google-map-card">
+          <div id="google-map" class="google-map" aria-label="Live Google map"></div>
+          <div class="map-legend">
+            <span><i class="legend-dot previous"></i><span data-i18n="dashboard.previousTracking">Previous tracking</span></span>
+            <span><i class="legend-dot live"></i><span data-i18n="dashboard.liveLocation">Live location</span></span>
+          </div>
+        </div>
+        <aside class="tracking-detail-card">
+          <h2 data-i18n="dashboard.shipmentDetails">Shipment details</h2>
+          <div class="tracking-detail-row"><span data-i18n="common.shipmentItem">Shipment item</span><strong id="tracking-item">Onion</strong></div>
+          <div class="tracking-detail-row"><span data-i18n="dashboard.quantity">Quantity</span><strong id="tracking-quantity">1,200 kg</strong></div>
+          <div class="tracking-detail-row"><span data-i18n="common.vehicle">Vehicle</span><strong id="tracking-vehicle">Truck MH 20 AB 4812</strong></div>
+          <div class="tracking-detail-row"><span data-i18n="common.eta">Live ETA</span><strong id="tracking-eta">2h 20m</strong></div>
+          <div class="tracking-detail-row"><span data-i18n="common.stop">Current stop</span><strong id="tracking-stop">Pune corridor</strong></div>
+          <div class="tracking-detail-row"><span data-i18n="dashboard.contactPartner">Contact</span><strong id="tracking-partner">Nutrient Foods</strong></div>
+        </aside>
+      </section>
+      <section class="tracking-history panel">
+        <div class="panel-header">
+          <div>
+            <h2 data-i18n="dashboard.trackingHistory">Tracking history</h2>
+            <p class="muted" data-i18n="dashboard.trackingHistoryText">Previous locations recorded for this shipment.</p>
+          </div>
+        </div>
+        <div id="tracking-history-list" class="tracking-history-list"></div>
+      </section>
+    </main>
+    <script src="i18n.js"></script>
+    <script src="tracking.js"></script>
+    <script src="voice-assistant.js"></script>
+  </body>
+</html>

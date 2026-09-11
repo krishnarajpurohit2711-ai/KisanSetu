@@ -1,0 +1,8 @@
+.account-page { max-width: 720px; margin: 0 auto; padding: 56px 24px; }
+.account-card { background: #fff; border: 1px solid #e1eadf; border-radius: 18px; padding: 34px; text-align: center; }
+.account-avatar { display: grid; place-items: center; width: 72px; height: 72px; margin: 0 auto 18px; border-radius: 50%; background: #e8f6eb; color: #2a7d4b; font-size: 30px; font-weight: 800; }
+.account-card h1 { margin: 8px 0 26px; color: #0f2942; }
+.account-details { display: grid; gap: 12px; margin-bottom: 26px; text-align: left; }
+.account-details div { display: flex; justify-content: space-between; gap: 16px; padding: 14px; border-radius: 10px; background: #f8faf8; }
+.account-details span { color: #718078; }
+.account-details strong { color: #203027; text-align: right; }

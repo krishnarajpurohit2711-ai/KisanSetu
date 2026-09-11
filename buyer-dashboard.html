@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buyer dashboard — KisanSetu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body class="dashboard-shell">
+    <header class="dashboard-topbar">
+      <a class="brand" href="index.html"><span class="brand-mark">↗</span><span>Kisan<span>Setu</span></span></a>
+      <nav class="topbar-links">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="buyer-dashboard.html" data-i18n="nav.dashboard">Dashboard</a>
+        <a href="farmer-dashboard.html" data-i18n="nav.farmerView">Farmer view</a>
+      </nav>
+      <div class="topbar-actions">
+        <select class="language-switch" aria-label="Select language" data-i18n-aria-label="common.selectLanguage">
+          <option value="en">EN</option>
+          <option value="hi">हिं</option>
+          <option value="mr">मर</option>
+        </select>
+        <span id="user-pill" class="user-pill" data-i18n="dashboard.buyerLabel">Buyer</span>
+        <button class="outline-button" id="logout-btn" type="button" data-i18n="common.logout">Log out</button>
+      </div>
+    </header>
+
+    <main class="dashboard-content">
+      <div class="dashboard-actions">
+        <button class="feature-launcher chat-launcher" type="button" data-open-chat>
+          <span class="feature-launcher-icon">◌</span>
+          <span><strong data-i18n="dashboard.openChat">Open chat</strong><small data-i18n="dashboard.chatWithFarmer">Discuss countered prices</small></span>
+        </button>
+        <button class="feature-launcher orders-launcher" type="button" data-open-orders>
+          <span class="feature-launcher-icon">▣</span>
+          <span><strong data-i18n="dashboard.orders">Orders</strong><small data-i18n="dashboard.ordersShort">Delivered, in transit and pending</small></span>
+        </button>
+      </div>
+      <div class="kpi-grid buyer-overview-grid">
+        <div class="kpi-card"><div class="kpi-label" data-i18n="dashboard.activeDemands">Active demands</div><div class="kpi-value">12</div><div class="kpi-change">+3 <span data-i18n="dashboard.thisWeek">this week</span></div></div>
+        <div class="kpi-card"><div class="kpi-label" data-i18n="dashboard.pendingOffers">Pending offers</div><div class="kpi-value">08</div><div class="kpi-change" data-i18n="dashboard.awaitingResponse">Awaiting response</div></div>
+        <div class="kpi-card"><div class="kpi-label" data-i18n="dashboard.totalPurchaseValue">Total purchase value</div><div class="kpi-value">₹18.6L</div><div class="kpi-change">+8.4% <span data-i18n="dashboard.vsLastWeek">vs last week</span></div></div>
+        <div class="kpi-card"><div class="kpi-label" data-i18n="dashboard.activeOrders">Active orders</div><div class="kpi-value">06</div><div class="kpi-change" data-i18n="dashboard.logisticsTracked">Logistics tracked</div></div>
+      </div>
+      <div class="advisor-card">
+        <div class="kpi-label" style="color:#b77f1f;" data-i18n="dashboard.aiAdvisor">AI sale-window advisor</div>
+        <div class="sale-window-context">
+          <span><b data-i18n="dashboard.saleItem">Item</b><strong id="sale-window-item">Tomato</strong></span>
+          <span><b data-i18n="dashboard.saleMarket">Market</b><strong id="sale-window-market">Pune APMC</strong></span>
+          <span><b data-i18n="dashboard.salePriceUnit">Price unit</b><strong id="sale-window-unit">₹/kg</strong></span>
+        </div>
+        <div style="display:flex; justify-content:space-between; gap:16px; align-items: end; margin-top: 18px; flex-wrap: wrap;">
+          <div>
+            <div id="sale-window-current-price" style="font-size: 2.7rem; font-weight: 900; letter-spacing: -0.08em; color: #0F2942;">₹<span data-localize-number="28" data-maximum-fraction-digits="0">28</span></div>
+            <div class="muted" data-i18n="dashboard.currentPrice">Current price</div>
+          </div>
+          <div>
+            <div id="sale-window-forecast-price" style="font-size: 2.7rem; font-weight: 900; letter-spacing: -0.08em; color: #0F2942;">₹<span data-localize-number="31" data-maximum-fraction-digits="0">31</span></div>
+            <div class="muted" data-i18n="dashboard.predicted7">Predicted 7-day price</div>
+          </div>
+          <div>
+            <div id="sale-window-range" class="sale-window-range">₹29–₹32</div>
+            <div class="muted" data-i18n="dashboard.recommendedRange">Recommended range</div>
+          </div>
+          <div class="small-button primary" style="padding: 12px 16px; display:inline-block;" data-i18n="dashboard.wait">Wait 2–3 days</div>
+        </div>
+      </div>
+
+      <section class="panel feature-panel">
+        <div class="panel-header">
+          <div>
+            <h2 data-i18n="dashboard.availableSellers">Farmers and companies selling produce</h2>
+            <p class="muted" data-i18n="dashboard.availableSellersText">Browse listed items and contact the seller directly.</p>
+          </div>
+        </div>
+        <div id="buyer-directory" class="seller-grid"></div>
+      </section>
+      <section class="panel feature-panel">
+        <div class="panel-header"><div><h2 data-i18n="dashboard.logisticsTracking">Logistics tracking</h2><p class="muted" data-i18n="dashboard.logisticsTrackingText">Monitor every purchase from pickup to delivery.</p></div></div>
+        <div class="order-flow buyer-order-flow"><span class="flow-step complete" data-i18n="dashboard.pickupScheduled">Pickup scheduled</span><span>→</span><span class="flow-step active" data-i18n="dashboard.inTransitState">In transit</span><span>→</span><span class="flow-step" data-i18n="dashboard.deliveredState">Delivered</span></div>
+      </section>
+
+      <section class="panel feature-panel counter-offers-panel">
+        <div class="panel-header">
+          <div>
+            <h2 data-i18n="dashboard.counterOffers">Countered prices</h2>
+            <p class="muted" data-i18n="dashboard.counterOffersBuyerText">See the farmer's latest counter price.</p>
+          </div>
+        </div>
+        <div id="counter-offers-list" class="counter-offers-list"></div>
+        <form id="counter-offer-form" class="counter-offer-form">
+          <label><span data-i18n="dashboard.yourCounterPrice">Your counter price (₹/quintal)</span><input id="counter-price" type="number" min="1" step="1" required placeholder="Enter price" /></label>
+          <button class="small-button primary" type="submit" data-i18n="dashboard.sendCounter">Send counter</button>
+        </form>
+      </section>
+
+      <section class="panel feature-panel chat-panel" id="chat-panel">
+        <div class="panel-header">
+          <div>
+            <h2 data-i18n="dashboard.priceChat">Price discussion</h2>
+            <p class="muted" data-i18n="dashboard.priceChatTextBuyer">Discuss the countered price with the farmer.</p>
+          </div>
+        </div>
+        <div id="chat-thread" class="chat-thread"></div>
+        <form id="chat-form" class="chat-form">
+          <input id="chat-message" required data-i18n-placeholder="dashboard.chatPlaceholder" placeholder="Write a message about the counter price..." />
+          <button class="small-button primary" type="submit" data-i18n="dashboard.send">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="i18n.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="voice-assistant.js"></script>
+  </body>
+</html>
